@@ -36,7 +36,15 @@ def main():
     screen = pygame.display.set_mode((1280, 720))
     screen_w, screen_h = screen.get_size()
 
-    icon = pygame.image.load("pygame-icon.png")
+    import numpy as np
+    from PIL import Image
+    img = np.zeros([100,100,3],dtype=np.uint8)
+    img.fill(255) # numpy array!
+    im = Image.fromarray(img) #convert numpy array to image
+    im.save('whh.jpg')
+
+    # icon = pygame.image.load("pygame-icon.png")
+    icon = pygame.image.load("whh.jpg")
     icon = icon.convert_alpha()
     icon_w, icon_h = icon.get_size()
 
