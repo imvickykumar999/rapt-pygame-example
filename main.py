@@ -1,6 +1,6 @@
 # Allow pygame_sdl2 to be imported as pygame.
-import pygame_sdl2
-pygame_sdl2.import_as_pygame()
+# import pygame_sdl2
+# pygame_sdl2.import_as_pygame()
 
 import pygame
 import os
@@ -77,6 +77,7 @@ def main():
 
         elif ev.type == pygame.MOUSEBUTTONDOWN:
             x, y  = ev.pos
+            print(x,y)
 
         elif ev.type == pygame.APP_WILLENTERBACKGROUND:
             # The app is about to go to sleep. It should save state, cancel
